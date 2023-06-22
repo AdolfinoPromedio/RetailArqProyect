@@ -42,10 +42,6 @@ def detectar_cara_y_manos_en_video():
                 if not ret:
                     break
 
-                frame_counter += 1
-                if frame_counter % 4 != 0:  # Procesar solo cada 5 frames (ajusta el número según tus necesidades)
-                    continue
-
                 # Convertir la imagen a RGB
                 image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
@@ -120,7 +116,7 @@ def detectar_cara_y_manos_en_video():
     cv2.destroyAllWindows()
 
 # Configuración de la detección de colisión
-threshold_distance = 0.1  # Ajusta este valor según tus necesidades
+threshold_distance = 0.1 # Ajusta este valor según tus necesidades
 
 # Ejecutar la función para detectar cara y manos en tiempo real
 detectar_cara_y_manos_en_video()
